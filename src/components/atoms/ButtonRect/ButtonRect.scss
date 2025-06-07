@@ -1,0 +1,61 @@
+@use '@/styles/_variables.scss' as *;
+
+.btn-rect{
+  position: relative;
+  width: 46px;
+  height: 46px;
+  overflow: hidden;
+  border-radius: 11px;
+  z-index: 1;
+  button,a{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 5.303px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border:none;
+    cursor: pointer;
+    svg{
+      display: flex;
+      width: 20px;
+      height: 20px;
+      path{
+        fill:#fff
+      }
+    }
+  }
+  &--green{
+    button,a{
+      background: $primary-color;
+      &:hover{
+        background-color: $color-400;
+      }
+    }
+
+  }
+  &--red{
+    button,a{
+      background: #e63322;
+      &:hover{
+        background-color: #820f05;
+      }
+    }
+  }
+  &--small{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    svg{
+      width: 10px !important;
+      height: 10px !important;
+    }
+  }
+  &:active{
+    transform: scale(0.95);
+  }
+}

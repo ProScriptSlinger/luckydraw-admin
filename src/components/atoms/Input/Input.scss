@@ -1,0 +1,87 @@
+@use '@/styles/_variables.scss' as *;
+.input{
+  position: relative;
+  width: 100%;
+  transition: all 0.3s ease;
+  &:hover {
+    input{
+     // background: #f5f5f5;
+      border-color:#2c2c2c;
+    }
+  }
+  input{
+    display: inline-block;
+    width: 100%;
+    padding: 27px 23px 11px 23px;
+    background: $elements-color;
+    border-radius: 8px;
+    //border:none;
+    outline: none;
+    z-index: 1;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 149.68%;
+    color: $main-color;
+    border: 1px solid $additional-color;
+
+    &:focus,&:not(:placeholder-shown){
+      ~ span{
+        font-size: 11px;
+        line-height: 18px;
+        font-weight: 600;
+      //  color:$color-700;
+        transform: translateY(-16px);
+      }
+    }
+  }
+  &__hex{
+    position: absolute;
+    width:27px;
+    height:27px;
+    border-radius: 6px;
+    right: 23px;
+    top:0;
+    bottom: 0;
+    margin: auto 0;
+    input{
+      display: block;
+      position: absolute;
+      padding: 0;
+      left:0;
+      top: 0;
+      width:100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+  &__label{
+    position: absolute;
+    display: inline;
+    top: 26px;
+    //bottom: 0;
+    left: 23px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+    color:$color-500;
+    transition: all 0.3s ease;
+    z-index: 0;
+    user-select:none;
+    cursor: text;
+
+  }
+  &.error{
+    input{
+      border-color:#ff0000;
+
+      &:hover{
+        border-color:#ff0000
+      }
+    }
+    span{
+      color:#ff0000 !important;
+    }
+  }
+}

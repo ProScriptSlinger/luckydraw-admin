@@ -1,0 +1,84 @@
+@use '@/styles/_variables.scss' as *;
+
+.capsule-image-list{
+  position: relative;
+  margin-top: 20px;
+  &__item{
+    position: relative;
+    background-color: $elements-color;
+    display: flex;
+    margin-bottom: 10px;
+    padding: 10px 25px 10px 10px;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+    width: 100%;
+    >a{
+      position: relative;
+      width: 100%;
+      display: flex;
+      color:$main-color
+    }
+    &-wrapper{
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &:hover{
+      transform: scale(0.995);
+    }
+    &-values{
+      display: flex;
+      gap: 5px;
+      @media (max-width:767px){
+        .tag{
+          >div{
+            display: none;
+          }
+        }
+      }
+    }
+    &-id{
+      position: absolute;
+      right: 3px;
+      bottom: 3px;
+      width: 15px;
+      height: 15px;
+      line-height: 100%;
+      border-radius:4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary-color;
+      color:#fff;
+      font-size: 11px;
+    }
+    &-image{
+      position: relative;
+      width: 75px;
+      height: 75px;
+      border-radius: 12px;
+      overflow: hidden;
+      svg{
+        width: 100%;
+        height: 100%;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-image-container{
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap:30px
+    }
+    &-title{
+
+    }
+  }
+
+}

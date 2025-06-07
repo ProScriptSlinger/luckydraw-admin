@@ -1,0 +1,62 @@
+@use '@/styles/_variables.scss' as *;
+
+.statistics-items{
+  position: relative;
+  display: flex;
+  gap: 20px;
+  &__item{
+    position: relative;
+    display: inline-flex;
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    background: $elements-color;
+    color: #737373;
+    flex-direction: column;
+    &-link{
+      position: absolute;
+      right: 15px;
+      top:15px;
+      background: $additional-color;
+      width: 35px;
+      height: 35px;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+      transform: rotate(-45deg);
+      cursor: pointer;
+      svg{
+        width: 17px;
+        height: 17px;
+        path{
+          fill:$main-color
+        }
+      }
+      &:hover{
+        background: $primary-color;
+        transform: rotate(0deg);
+      }
+    }
+    &-content{
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: 30px;
+      &-counter{
+        display: flex;
+        flex-direction: column;
+        span{
+          font-size: 14px;
+          &:first-child{
+            font-size: 22px;
+            color:$main-color
+          }
+        }
+      }
+    }
+  }
+}
+

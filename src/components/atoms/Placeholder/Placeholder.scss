@@ -1,0 +1,31 @@
+@use '@/styles/_variables.scss' as *;
+
+.placeholder{
+  position: relative;
+  padding: 20px 25px;
+  border-radius: 7px;
+  font-size: 21px;
+  width: 100%;
+  font-style: normal;
+  font-weight: 500;
+  background: $elements-color;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  @media (max-width:1200px){
+    padding: 20px 25px;
+    font-size: 21px;
+    grid-column-end: 5;
+  }
+  b{
+    display: block;
+    font-size: 24px;
+    color: $main-color;
+    padding-bottom: 10px;
+  }
+  p{
+    font-size: 18px;
+    color: $main-color;
+  }
+}

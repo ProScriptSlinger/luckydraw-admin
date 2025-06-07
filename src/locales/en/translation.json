@@ -1,0 +1,53 @@
+{
+  "modals": {
+    "yes": "Yes",
+    "cancel": "Cancel",
+    "delete_modal": {
+      "title": "Delete",
+      "description": "Do you really want to delete this item?"
+    },
+    "import_modal": {
+      "title": "Import",
+      "description": ""
+    }
+  },
+  "elements": {
+    "select": "Select",
+    "search": "Search...",
+    "image": "Upload image",
+    "gallery": "Upload gallery",
+    "file": "Upload file"
+  },
+  "images": {
+    "title": "Upload image"
+  },
+  "capsules_pages": {
+    "title": "Capsules",
+    "page": {
+      "title": "Edit capsule"
+    },
+    "create": {
+      "title": "Create capsule"
+    },
+    "fields": {
+      "title": "Capsule name*",
+      "energy": "Amount of energy",
+      "maxEnergy": "Max amount of energy",
+      "coins": "Amount of coins"
+    }
+  },
+  "users_pages": {
+    "title": "Users",
+    "page": {
+      "title": "Edit user"
+    },
+    "fields": {
+      "isBan": "Ban account",
+      "roles": "User role"
+    }
+  },
+  "menu": {
+    "settings": "Settings",
+    "logout": "Logout"
+  }
+}

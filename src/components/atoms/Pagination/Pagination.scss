@@ -1,0 +1,37 @@
+@use '@/styles/_variables.scss' as *;
+
+.pagination{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+    gap:10px;
+    list-style: none;
+  li{
+    &.active{
+      a{
+        background: $primary-color;
+        color:$main_color;
+        &:hover{
+          background:$main-color;
+          color:$primary-color;
+        }
+      }
+    }
+  }
+    a{
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background:$main-color;
+      color:$primary-color;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      &:hover{
+        background: $primary-color;
+        color:$main_color;
+      }
+    }
+}

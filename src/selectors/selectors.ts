@@ -1,0 +1,54 @@
+import {createSelector} from "reselect";
+import {RootState} from "../redux/store";
+import {getRandomColor, getTimeDate} from "../helpers/scripts";
+import participants from "../pages/Participants/Participants.tsx";
+export const selectCapsules = (state:RootState) => state.capsules.capsules;
+export const selectCapsulesToListList = createSelector(selectCapsules, (products)=>{
+    return [
+/*        {
+            name: "Всі товари",
+            value: null
+        },*/
+        ...products.map((item:any)=>{
+        return {
+            name: item?.title,
+            value: item?.id
+        }
+    })]
+});
+
+
+export const selectUsers = (state:RootState) => state.users.users;
+
+export const selectUsersList = createSelector(selectUsers, (users)=>{
+    return users.map((item:any)=>{
+        return {
+            keyID: item.id,
+            id: item.id,
+            title: item?.email,
+            date: getTimeDate(item.createdAt as string),
+            status: {
+                name:item?.roles![0]?.title,
+                color: getRandomColor(item?.roles![0]?.title)
+            },
+        }
+    })
+});
+
+export const selectParticipants = (state:RootState) => state.participants.participants;
+
+export const selectParticipantsList = createSelector(selectParticipants, (participants)=>{
+    return participants.map((item:any)=>{
+        const telegram_user = JSON.parse(item?.telegram_user) ?? ""
+        return {
+            keyID: item.id,
+            id: item.id,
+            title: item?.name,
+            date: getTimeDate(item.createdAt as string),
+            energy: item.energy,
+            maxEnergy: item.maxEnergy,
+            coins: item.coins,
+            telegram_username: telegram_user?.username
+        }
+    })
+});

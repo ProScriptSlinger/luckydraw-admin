@@ -1,0 +1,112 @@
+@use '@/styles/_variables.scss' as *;
+
+.category-info-list{
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+  @media (max-width:1200px){
+    //gap:10px;
+  }
+  &__item{
+    position: relative;
+    background-color: $elements-color;
+    display: flex;
+    margin-bottom: 10px;
+    padding: 15px 20px 15px 20px;
+    border-radius: 14px;
+    transition: transform 0.3s ease;
+    width: 100%;
+    @media (max-width:1200px){
+      width: calc(50% - 10px);
+    }
+    @media (max-width:767px){
+      width: 100%;
+    }
+    >a{
+      position: relative;
+      width: 100%;
+      display: flex;
+      color:$main-color
+    }
+    &-values{
+      display: flex;
+      gap: 5px;
+      @media (max-width:767px){
+        .tag{
+          >div{
+            display: none;
+          }
+        }
+      }
+    }
+    &-wrapper{
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width:1200px){
+        flex-wrap:wrap;
+        width: 100%;
+        flex-direction: column;
+        align-content: space-between;
+        gap: 20px;
+      }
+    }
+    &:hover{
+      transform: scale(0.995);
+    }
+    &-id{
+      position: relative;
+      min-width: 15px;
+      height: 15px;
+      line-height: 100%;
+      border-radius:4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-700;
+      color:#fff;
+      font-size: 11px;
+      padding:0 4px;
+    }
+    &-image{
+      position: relative;
+    }
+    &-image-container{
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap:30px;
+      @media (max-width:1200px){
+      width: 100%;
+      }
+    }
+    &-title{
+      font-weight: 500;
+      font-size: 15px;
+      color:$main-color
+    }
+    &-details{
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      @media (max-width:1200px){
+        width: 100%;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+    &-date{
+      font-size: 15px;
+      font-weight: 500;
+      @media (max-width:1200px){
+      width: 100%;
+      }
+    }
+  }
+}

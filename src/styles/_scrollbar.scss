@@ -1,0 +1,16 @@
+@use '@/styles/_variables.scss' as *;
+/* width */
+::-webkit-scrollbar {
+  width: 6px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary_color; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #131313; }

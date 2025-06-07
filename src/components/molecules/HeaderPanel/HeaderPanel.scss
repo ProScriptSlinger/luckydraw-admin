@@ -1,0 +1,32 @@
+@use '@/styles/_variables.scss' as *;
+
+.header-panel{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  &__title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: left;
+    color: $main-color
+  }
+  &__white{
+    svg{
+      width: 24px;
+      height: 24px;
+
+      fill-opacity: 1;
+      path{
+        fill:#fff;
+      }
+    }
+  }
+  &__controls{
+    display: flex;
+    gap: 10px
+  }
+}

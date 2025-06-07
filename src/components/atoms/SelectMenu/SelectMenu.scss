@@ -1,0 +1,32 @@
+@use '@/styles/_variables.scss' as *;
+.select-menu{
+  position: relative;
+  display: flex;
+  gap:13px;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    height: 3px !important; }
+  padding-bottom: 20px;
+  &__item{
+    flex-shrink: 0;
+    a{
+      position: relative;
+      display: inline-block;
+      background: transparent;
+      border-radius: 10px;
+      color: $primary-color;
+      padding: 10px;
+      transition: all 0.3s ease;
+      &:hover{
+        color:#fff;
+        background: $primary-color;
+      }
+    }
+    &.active{
+      a{
+        color:#fff;
+        background: $primary-color;
+      }
+    }
+  }
+}
