@@ -8,6 +8,8 @@ import './Sidebar.scss'
 import BagIcon from "../../icons/BagIcon.tsx";
 import UserIcon from "../../icons/UserIcon.tsx";
 import {useTranslation} from "react-i18next";
+import i18n from '../../../i18n.ts';
+import InfoTagIcon from '../../icons/InfoTagIcon.tsx';
 
 const Sidebar = () => {
     const dispatch = useDispatchEx();
@@ -20,7 +22,7 @@ const Sidebar = () => {
                 <div className="sidebar__header">
                     <div className="sidebar__logo">
                         <Link to={'/'}>
-                            FOXYFIT PANEL
+                            LuckyDraw PANEL
                         </Link>
 
                     </div>
@@ -33,14 +35,16 @@ const Sidebar = () => {
                 <div className={`sidebar__menu-container ${burger ? "active" : ""}`}>
                     <div className="sidebar__nav">
                         <ul className={'sidebar__menu'}>
-                            <li className={'sidebar__item'}><Link to="/participants">Участники <UserIcon/></Link></li>
-                            <li className={'sidebar__item'}><Link to="/capsules">Капсулы <BagIcon/></Link></li>
+                            <li className={'sidebar__item'}><Link to="/participants">{t('participants_pages.title')} <UserIcon/></Link></li>
+                            <li className={'sidebar__item'}><Link to="/campaigns">{t('campaigns_pages.title')} <BagIcon/></Link></li>
+                            {/* <li className={'sidebar__item'}><Link to="/capsules">{t('capsules_pages.title')} <BagIcon/></Link></li> */}
+                            <li className={'sidebar__item'}><Link to="/users">{t('users_pages.title')} <InfoTagIcon/></Link></li>
                         </ul>
                     </div>
                     <div className="sidebar__additional-nav">
                         <ul className={'sidebar__menu'}>
-                            <li className={'sidebar__item'}><Link to="/mysettings">Настройки</Link></li>
-                            <li className={'sidebar__item'}><Link onClick={()=>dispatch(asyncLogoutAction())} to="/logout">Выйти</Link></li>
+                            <li className={'sidebar__item'}><Link to="/mysettings">{t('my_settings_pages.title')}</Link></li>
+                            <li className={'sidebar__item'}><Link onClick={()=>dispatch(asyncLogoutAction())} to="/logout">{t('logout_pages.title')}</Link></li>
                         </ul>
                     </div>
                 </div>

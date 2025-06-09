@@ -29,7 +29,7 @@ export const asyncGetParticipantsAction = createAsyncThunk(
 );
 export const asyncGetParticipantAction = createAsyncThunk(
     'participants/one',
-    async (id:number, thunkAPI)=>{
+    async (id:string, thunkAPI)=>{
         try {
             let response = await ParticipantsService.findOne(id);
             return response.data;
@@ -44,13 +44,13 @@ export const asyncUpdateParticipantAction = createAsyncThunk(
     'participants/update',
     async (category:IParticipant, thunkAPI)=>{
         try {
-            const {id,name,energy,maxEnergy,coins} = category;
+            const {id,name,points,tickets,dailyStreak} = category;
 
             const participant = {
                 name,
-                energy:Number(energy),
-                maxEnergy:Number(maxEnergy),
-                coins:Number(coins)
+                points:Number(points),
+                tickets:Number(tickets),
+                dailyStreak:Number(dailyStreak)
             }
 
             let response = await ParticipantsService.update(participant, id);
@@ -63,7 +63,7 @@ export const asyncUpdateParticipantAction = createAsyncThunk(
 
 export const asyncDeleteParticipantAction = createAsyncThunk(
     'participants/delete',
-    async (id:number, thunkAPI)=>{
+    async (id:string, thunkAPI)=>{
         try {
             let response = await ParticipantsService.delete(id);
             return response.data;

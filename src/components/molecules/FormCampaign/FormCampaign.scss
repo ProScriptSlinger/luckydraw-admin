@@ -1,0 +1,46 @@
+@use '@/styles/_variables.scss' as *;
+
+.form-campaign {
+    position: relative;
+    &__wrapper {
+        display: flex;
+        gap: 20px;
+    }
+    &__block {
+        position: relative;
+        width: 50%;
+    }
+    &__inner {
+        margin-top: 20px;
+        h3 {
+            font-weight: 600;
+            font-size: 16px;
+            color: $main-color;
+            margin-bottom: 20px;
+        }
+    }
+    &__input {
+        margin-bottom: 20px;
+    }
+    &__checkboxs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    &__checkbox {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 11px 17px;
+        border-radius: 8px;
+        background: $elements-color;
+        span {
+            font-weight: 600;
+            font-size: 15px;
+            color: $color-500;
+        }
+    }
+} 

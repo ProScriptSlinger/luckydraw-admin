@@ -1,0 +1,133 @@
+@use '@/styles/_variables.scss' as *;
+
+.image-upload {
+    &__container {
+        position: relative;
+        width: 100%;
+    }
+
+    &__label {
+        font-size: 14px;
+        color: $color-500;
+        margin-bottom: 8px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__dropzone {
+        position: relative;
+        width: 100%;
+        min-height: 200px;
+        border: 2px dashed $additional-color;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: $elements-color;
+        padding: 20px;
+
+        &:hover {
+            border-color: $primary-color;
+            background: rgba($primary-color, 0.05);
+        }
+
+        &.dragging {
+            border-color: $primary-color;
+            background: rgba($primary-color, 0.1);
+        }
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 12px;
+        color: $additional-color;
+    }
+
+    &__text {
+        font-size: 16px;
+        color: $main-color;
+        margin-bottom: 8px;
+    }
+
+    &__subtext {
+        font-size: 14px;
+        color: $additional-color;
+    }
+
+    &__preview {
+        margin-top: 20px;
+        position: relative;
+        width: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        background: $elements-color;
+        border: 1px solid $additional-color;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+        }
+    }
+
+    &__actions {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        gap: 8px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    &__preview:hover &__actions {
+        opacity: 1;
+    }
+
+    &__action-button {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: rgba($main-color, 0.8);
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: $main-color;
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+            color: $elements-color;
+        }
+    }
+
+    &__remove-button {
+        background: rgba($error-color, 0.8);
+
+        &:hover {
+            background: $error-color;
+        }
+    }
+
+    &__filename {
+        padding: 8px 12px;
+        font-size: 14px;
+        color: $main-color;
+        background: $elements-color;
+        border-top: 1px solid $additional-color;
+    }
+} 

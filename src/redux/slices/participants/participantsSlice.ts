@@ -86,7 +86,7 @@ const participantsSlice = createSlice({
             .addCase(asyncGetParticipantAction.fulfilled, (state: any, action: any) => {
                 state.isLoadingParticipant = false;
                 state.error = '';
-                state.participant = action.payload;
+                state.participant = { id: action.payload._id, ...action.payload };
             })
             .addCase(asyncGetParticipantAction.rejected, (state: any, action: any) => {
                 state.isLoadingParticipant = false;
@@ -103,7 +103,7 @@ const participantsSlice = createSlice({
             .addCase(asyncUpdateParticipantAction.fulfilled, (state: any, action: any) => {
                 state.isLoadingParticipant = false;
                 state.error = '';
-                state.participant = action.payload;
+                state.participant = { id: action.payload._id, ...action.payload };
                 toast.success('Участник обновлена!', toastSetting);
             })
             .addCase(asyncUpdateParticipantAction.rejected, (state: any, action: any) => {

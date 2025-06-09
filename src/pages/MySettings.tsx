@@ -87,7 +87,7 @@ const MySettings:FC = () => {
                                     <div className="form-product__inner">
                                         <form onSubmit={handleSubmit} >
                                             <div className="form-product__input">
-                                                <Input className={errors.fullName && touched.fullName ? "error": ""} value={values.fullName} onBlur={handleBlur} onChange={handleChange} name={'fullName'} placeholder={'ФИО*'} />
+                                                <Input className={errors.fullName && touched.fullName ? "error": ""} value={values.fullName} onBlur={handleBlur} onChange={handleChange} name={'fullName'} placeholder={'Full Name*'} />
                                                 <ErrorMessage message={errors.fullName && touched.fullName && errors.fullName}/>
                                             </div>
                                             <div className="form-product__input">
@@ -95,11 +95,11 @@ const MySettings:FC = () => {
                                                 <ErrorMessage message={errors.email && touched.email && errors.email}/>
                                             </div>
                                             <div className="form-product__input">
-                                                <Input className={errors.password && touched.password ? "error": ""} value={values.password} onBlur={handleBlur} onChange={handleChange} name={'password'} placeholder={'Пароль*'} />
+                                                <Input className={errors.password && touched.password ? "error": ""} value={values.password} onBlur={handleBlur} onChange={handleChange} name={'password'} placeholder={'Password*'} />
                                                 <ErrorMessage message={errors.password && touched.password && errors.password}/>
                                             </div>
                                             <div className="form-product__input">
-                                                <Input className={errors.confirmPassword && touched.confirmPassword ? "error": ""} value={values.confirmPassword} onBlur={handleBlur} onChange={handleChange} name={'confirmPassword'} placeholder={'Подтверждение пароля*'} />
+                                                <Input className={errors.confirmPassword && touched.confirmPassword ? "error": ""} value={values.confirmPassword} onBlur={handleBlur} onChange={handleChange} name={'confirmPassword'} placeholder={'Confirm Password*'} />
                                                 <ErrorMessage message={errors.confirmPassword && touched.confirmPassword && errors.confirmPassword}/>
                                             </div>
                                         </form>

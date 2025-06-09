@@ -1,0 +1,104 @@
+{
+  "modals": {
+    "yes": "Да",
+    "cancel": "Отмена",
+    "delete_modal": {
+      "title": "Удалить",
+      "description": "Вы действительно хотите удалить этот элемент?"
+    },
+    "import_modal": {
+      "title": "Импорт",
+      "description": ""
+    }
+  },
+  "elements": {
+    "select": "Выбрать",
+    "search": "Поиск...",
+    "image": "Загрузить изображение",
+    "gallery": "Загрузить галерею",
+    "file": "Загрузить файл"
+  },
+  "images": {
+    "title": "Загрузить изображение"
+  },
+  "capsules_pages": {
+    "title": "Капсулы",
+    "page": {
+      "title": "Редактировать капсулу"
+    },
+    "create": {
+      "title": "Создать капсулу"
+    },
+    "fields": {
+      "title": "Название капсулы*",
+      "energy": "Количество энергии",
+      "maxEnergy": "Максимальное количество энергии",
+      "coins": "Количество монет"
+    }
+  },
+  "users_pages": {
+    "title": "Пользователи",
+    "page": {
+      "title": "Редактировать пользователя"
+    },
+    "fields": {
+      "isBan": "Заблокировать аккаунт",
+      "roles": "Роль пользователя"
+    }
+  },
+  "participants_pages": {
+    "title": "Участники"
+  },
+  "my_settings_pages": {
+    "title": "Настройки"
+  },
+  "logout_pages": {
+    "title": "Выйти"
+  },
+  "campaigns_pages": {
+    "title": "Кампании",
+    "create": {
+      "title": "Создать кампанию"
+    },
+    "page": {
+      "title": "Редактировать кампанию"
+    },
+    "fields": {
+      "image_url": "URL изображения",
+      "brand_logo_url": "URL логотипа бренда",
+      "is_popular": "Популярная",
+      "is_new": "Новая",
+      "is_final": "Финальная",
+      "is_cool_prize": "Крутая награда",
+      "allow_donation": "Разрешить донат",
+      "name_ru": "Название (ru)",
+      "name_uz": "Название (uz)",
+      "product_name_ru": "Название продукта (ru)",
+      "product_name_uz": "Название продукта (uz)",
+      "product_description_ru": "Описание продукта (ru)",
+      "product_description_uz": "Описание продукта (uz)",
+      "start_date": "Дата начала",
+      "end_date": "Дата окончания",
+      "max_participants": "Максимальное количество участников",
+      "product_price": "Цена продукта"
+    },
+    "sections": {
+      "media": "Медиа",
+      "dates_price": "Дата и цена",
+      "settings": "Настройки",
+      "basic_info": "Основная информация"
+    }
+  },
+  "image_upload": {
+    "update": "Обновить",
+    "remove": "Удалить",
+    "click_or_drag": "Нажмите или перетащите",
+    "supported_formats": "Поддерживаемые форматы: JPG, PNG, GIF, SVG",
+    "max_size": "Максимальный размер: 10MB",
+    "uploaded_logo": "Загруженный логотип",
+    "uploaded_image": "Загруженное изображение"
+  },
+  "dashboard": {
+    "title": "Статистика"
+  }
+} 

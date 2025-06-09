@@ -18,7 +18,7 @@ export const asyncGetUsersAction = createAsyncThunk(
 
 export const asyncGetUserAction = createAsyncThunk(
     'users/one',
-    async (id:number, thunkAPI)=>{
+    async (id:string, thunkAPI)=>{
         try {
             let response = await UsersService.findOne(id);
             return response.data;

@@ -8,12 +8,12 @@ import {getColorById} from "../../../helpers/scripts.ts";
 
 interface ICategoryInfoItem{
     keyID?:any
-    id: number;
+    id: string;
     title: string;
     date?: string;
-    coins?: number;
-    maxEnergy?: number;
-    energy?: number;
+    points?: number;
+    tickets?: number;
+    dailyStreak?: number;
     telegram_username?:string;
 }
 
@@ -25,13 +25,13 @@ interface ICategoryInfoList{
 const CategoryInfoList:FC<ICategoryInfoList> = ({link='',items=[]}) => {
     return (
         <div className="category-info-list">
-            {items?.length ? items.map(item =>{
+            {items?.length ? items.map((item, index) =>{
                 return <div key={item.keyID} className="category-info-list__item">
                     <Link to={`${link}/${item.id}`}>
                         <div className="category-info-list__item-wrapper">
                             <div className="category-info-list__item-image-container">
                                 <div className="category-info-list__item-id">
-                                   # {item.id}
+                                   # {index+1}
                                 </div>
                                 <div className="category-info-list__item-image">
                                     <TextAvatar name={item.title} />
@@ -40,9 +40,9 @@ const CategoryInfoList:FC<ICategoryInfoList> = ({link='',items=[]}) => {
                             </div>
                             <div className="category-info-list__item-details">
                                 <div className="category-info-list__item-values">
-                                    <Tag name={<><div>Енергия</div> {item.energy ?? 0}</>} textColor={getColorById(2).textColor} color={getColorById(2).color}/>
-                                    <Tag name={<><div>Макс. Енергия </div> {item.maxEnergy ?? 0}</>} textColor={getColorById(3).textColor} color={getColorById(3).color}/>
-                                    <Tag name={<><div>Монеты</div> {item.coins ?? 0}</>} textColor={getColorById(4).textColor} color={getColorById(4).color}/>
+                                    <Tag name={<><div>Енергия</div> {item.points ?? 0}</>} textColor={getColorById(2).textColor} color={getColorById(2).color}/>
+                                    <Tag name={<><div>Макс. Енергия </div> {item.tickets ?? 0}</>} textColor={getColorById(3).textColor} color={getColorById(3).color}/>
+                                    <Tag name={<><div>Монеты</div> {item.dailyStreak ?? 0}</>} textColor={getColorById(4).textColor} color={getColorById(4).color}/>
                                 </div>
                                 {item?.date ? <div className="category-info-list__item-date">
                                     {item.date}

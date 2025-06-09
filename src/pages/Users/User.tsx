@@ -20,7 +20,7 @@ const User:FC = () => {
     const [fileList, setFileList] = useState<any[]>([]);
 
     useEffect(()=>{
-        dispatch(asyncGetUserAction(Number(userID)));
+        dispatch(asyncGetUserAction(userID as string));
     },[userID]);
 
     const handleChangeImage:any = ({fileList}:any) => {
@@ -131,7 +131,7 @@ const User:FC = () => {
                                     </div>
                                     <div className="form-product__inner">
                                         <div className="form-product__input">
-                                            <Input className={errors.fullName && touched.fullName ? "error": ""} value={values.fullName} onBlur={handleBlur} onChange={handleChange} name={'fullName'} placeholder={'ПІБ*'} />
+                                            <Input className={errors.fullName && touched.fullName ? "error": ""} value={values.fullName} onBlur={handleBlur} onChange={handleChange} name={'fullName'} placeholder={'Full Name*'} />
                                             <ErrorMessage message={errors.fullName && touched.fullName && errors.fullName}/>
                                         </div>
                                         <div className="form-product__input">
@@ -159,11 +159,11 @@ const User:FC = () => {
 
                                         </div>
                                         <div className="form-product__input">
-                                            <Input className={errors.password && touched.password ? "error": ""} value={values.password} onBlur={handleBlur} onChange={handleChange} name={'password'} placeholder={'Пароль*'} />
+                                            <Input className={errors.password && touched.password ? "error": ""} value={values.password} onBlur={handleBlur} onChange={handleChange} name={'password'} placeholder={'Password*'} />
                                             <ErrorMessage message={errors.password && touched.password && errors.password}/>
                                         </div>
                                         <div className="form-product__input">
-                                            <Input className={errors.confirmPassword && touched.confirmPassword ? "error": ""} value={values.confirmPassword} onBlur={handleBlur} onChange={handleChange} name={'confirmPassword'} placeholder={'Підтвердження паролю*'} />
+                                            <Input className={errors.confirmPassword && touched.confirmPassword ? "error": ""} value={values.confirmPassword} onBlur={handleBlur} onChange={handleChange} name={'confirmPassword'} placeholder={'Confirm Password*'} />
                                             <ErrorMessage message={errors.confirmPassword && touched.confirmPassword && errors.confirmPassword}/>
                                         </div>
                                     </div>
@@ -180,7 +180,7 @@ const User:FC = () => {
                                             </div>
                                         </div>
                                         <div className="form-product__input">
-                                            <Input className={errors.banReason && touched.banReason ? "error": ""} value={values.banReason} onBlur={handleBlur} onChange={handleChange} name={'banReason'} placeholder={'Причина блокування'} />
+                                            <Input className={errors.banReason && touched.banReason ? "error": ""} value={values.banReason} onBlur={handleBlur} onChange={handleChange} name={'banReason'} placeholder={'Ban Reason'} />
                                             <ErrorMessage message={errors.banReason && touched.banReason && errors.banReason}/>
                                         </div>
                                     </div>

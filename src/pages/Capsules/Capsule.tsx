@@ -35,9 +35,9 @@ const Capsule = () => {
     useEffect(()=>{
         if(capsule){
             config.setFieldValue('title',capsule?.title);
-            config.setFieldValue('energy',capsule?.energy);
-            config.setFieldValue('maxEnergy',capsule?.maxEnergy);
-            config.setFieldValue('coins',capsule?.coins);
+            config.setFieldValue('tickets',capsule?.tickets);
+            config.setFieldValue('dailyStreak',capsule?.dailyStreak);
+            config.setFieldValue('balance',capsule?.balance);
         }
     },[capsule]);
 

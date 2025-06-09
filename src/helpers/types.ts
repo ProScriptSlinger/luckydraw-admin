@@ -1,10 +1,9 @@
-
 export interface AuthResponse {
     accessToken: string;
 }
 
 export interface IUser {
-    id?: number;
+    id?: string;
     email?: string;
     password?: string;
     avatar?: string | File | FileList;
@@ -16,34 +15,63 @@ export interface IUser {
     role?: string;
 }
 
-
-
 export interface ICapsule {
-    id: number;
+    id: string;
     title?: string;
-    energy?:number;
-    maxEnergy?: number;
-    coins?: number;
+    balance?:number;
+    tickets?: number;
+    dailyStreak?: number;
 }
 
 export interface IParticipant {
-    id: number;
+    id: string;
     name: string;
-    energy?: number;
-    maxEnergy: number;
-    coins: number;
+    points?: number;
+    tickets?: number;
+    dailyStreak?: number;
     telegram_id: string;
     referralId?: string;
     invitedByReferralId?: string;
     lastDailyGift: Date;
-    lastEnergyUpdate: number;
+    lastDailyReward: number;
     ip?:string;
     country?: string;
     telegram_user?: string;
 }
 
+export interface MultilingualContent {
+    // en: string;
+    ru: string;
+    uz: string;
+}
 
+export interface ICampaign {
+    _id: string;
+    name: MultilingualContent;
+    productName: MultilingualContent;
+    productDescription: MultilingualContent;
+    imageUrl: string;
+    brandLogoUrl: string;
+    startDate: string;
+    endDate: string;
+    maxParticipants?: number;
+    categories?: string[];
+    isPopular?: boolean;
+    isNew?: boolean;
+    isFinal?: boolean;
+    isCoolPrize?: boolean;
+    productPrice: number;
+    allowDonation?: boolean;
+    availableCities?: string[];
+    deliveryPrices?: Record<string, number>;
+    createdAt?: string;
+    updatedAt?: string;
+}
 
+export interface ICreateCampaignDto extends Omit<ICampaign, '_id' | 'createdAt' | 'updatedAt'> {}
+export interface IUpdateCampaignDto extends Partial<ICreateCampaignDto> {
+    _id: string;
+}
 
 export enum NotificationType {
     INFO = "INFO",

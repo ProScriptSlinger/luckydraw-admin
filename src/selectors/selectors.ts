@@ -23,8 +23,8 @@ export const selectUsers = (state:RootState) => state.users.users;
 export const selectUsersList = createSelector(selectUsers, (users)=>{
     return users.map((item:any)=>{
         return {
-            keyID: item.id,
-            id: item.id,
+            keyID: item._id,
+            id: item._id,
             title: item?.email,
             date: getTimeDate(item.createdAt as string),
             status: {
@@ -41,13 +41,13 @@ export const selectParticipantsList = createSelector(selectParticipants, (partic
     return participants.map((item:any)=>{
         const telegram_user = JSON.parse(item?.telegram_user) ?? ""
         return {
-            keyID: item.id,
-            id: item.id,
+            keyID: item._id,
+            id: item._id,
             title: item?.name,
             date: getTimeDate(item.createdAt as string),
-            energy: item.energy,
-            maxEnergy: item.maxEnergy,
-            coins: item.coins,
+            points: item.points,
+            tickets: item.tickets,
+            dailyStreak: item.dailyStreak,
             telegram_username: telegram_user?.username
         }
     })

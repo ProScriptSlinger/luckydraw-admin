@@ -1,4 +1,6 @@
+@use '@/styles/_variables.scss' as *;
 $color-text: #333333;
+
 
 .menu{
   position: relative;
@@ -40,4 +42,21 @@ $color-text: #333333;
   .active{
     color:#888888;
   }
+}
+
+.campaign-form {
+    padding: 20px 0;
+
+    &__section {
+        background: $elements-color;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        h3 {
+            margin-bottom: 20px;
+            color: $primary-color;
+            font-size: 1.2rem;
+        }
+    }
 }

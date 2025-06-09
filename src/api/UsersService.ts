@@ -14,7 +14,7 @@ export default class UsersService {
             })
     }
 
-    static async findOne(userID:number): Promise<AxiosResponse<any>> {
+    static async findOne(userID:string): Promise<AxiosResponse<any>> {
         return instance.get<IUser[]>(`users/${userID}` )
     }
 
@@ -22,7 +22,7 @@ export default class UsersService {
         return instance.get<IUser[]>(`users/roles` )
     }
 
-    static async update(userID:number,settings:any): Promise<AxiosResponse<any>> {
+    static async update(userID:string,settings:any): Promise<AxiosResponse<any>> {
         return instance.put<IUser[]>(`users/${userID}`,settings )
     }
 

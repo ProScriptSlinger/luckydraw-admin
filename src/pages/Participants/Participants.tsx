@@ -21,6 +21,8 @@ const Participants:FC = () => {
     const dataList: any[] = useSelectorEx(selectParticipantsList)
     const { pageNumber } = useParams();
 
+    console.log('data list',dataList)
+
 
     const { t } = useTranslation();
 
@@ -34,7 +36,7 @@ const Participants:FC = () => {
     return (
         <>
             <div className="container">
-                <HeaderPanel title={"Участники"}  />
+                <HeaderPanel title={t('participants_pages.title')}  />
                 {!isLoading ?
                     <>
                         <CategoryInfoList link={'/participants'} items={dataList}/>

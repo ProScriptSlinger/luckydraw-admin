@@ -10,9 +10,10 @@ interface IRectButton{
     className?: string;
     onClick?: ()=>void
     href?:string;
+    icon?:ReactNode;
 }
 
-const Button:FC<IRectButton> = ({colorType='primary',type="link",name,className='', onClick, href}) => {
+const Button:FC<IRectButton> = ({colorType='primary',type="link",name,className='', onClick, href, icon}) => {
     return (
         <div className={`btn ${className} btn--${colorType}`}>
             {
@@ -20,11 +21,11 @@ const Button:FC<IRectButton> = ({colorType='primary',type="link",name,className=
             :
             type === 'button' ?
             <button type={'submit'} onClick={onClick} className={`btn__wrapper`}>
-                <span> {name}</span>
+                <span> {name} {icon}</span>
             </button>
             :
             <Link onClick={onClick} className={`btn__wrapper`} to={href as string}>
-                <span>{name}</span>
+                <span>{name} {icon}</span>
             </Link>
             }
         </div>

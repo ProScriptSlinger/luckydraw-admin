@@ -17,16 +17,16 @@ export default class ParticipantsService {
         return instance.get<IParticipant[]>('participants/getFullStatistics')
     }
 
-    static async findOne(participantID:number): Promise<AxiosResponse<IParticipant>> {
+    static async findOne(participantID:string): Promise<AxiosResponse<IParticipant>> {
         return instance.get<IParticipant>(`participants/${participantID}` )
     }
 
 
-    static async update(category:any,participantID:number): Promise<AxiosResponse<IParticipant>> {
+    static async update(category:any,participantID:string): Promise<AxiosResponse<IParticipant>> {
         return instance.put<IParticipant>(`participants/${participantID}`,category)
     }
 
-    static async delete(participantID:number): Promise<AxiosResponse<IParticipant>> {
+    static async delete(participantID:string): Promise<AxiosResponse<IParticipant>> {
         return instance.delete<IParticipant>(`participants/${participantID}`)
     }
 }

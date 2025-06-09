@@ -46,8 +46,76 @@
       "roles": "User role"
     }
   },
+  "participants_pages": {
+    "title": "Participants"
+  },
   "menu": {
     "settings": "Settings",
     "logout": "Logout"
+  },
+  "my_settings_pages": {
+    "title": "My Settings"
+  },
+  "logout_pages": {
+    "title": "Logout"
+  },
+  "campaigns_pages": {
+    "title": "Campaigns",
+    "create": {
+      "title": "Create campaign"
+    },
+    "fields": {
+      "is_popular": "Popular",
+      "is_new": "New",
+      "is_final": "Final",
+      "is_cool_prize": "Cool prize",
+      "allow_donation": "Allow donation",
+      "image_url":"Image URL",
+      "name_ru":"Name (ru)",
+      "name_uz":"Name (uz)",
+      "product_name_ru":"Product name (ru)",
+      "product_name_uz":"Product name (uz)",
+      "product_description_ru":"Product description (ru)",
+      "product_description_uz":"Product description (uz)",
+      "start_date":"Start date",
+      "end_date":"End date",
+      "max_participants":"Max participants",
+      "product_price":"Product price",  
+      "settings":"Settings",
+      "delivery":"Delivery",
+      "prizes":"Prizes",
+      "donation":"Donation",
+      "brand_logo_url":"Brand logo URL"
+    },
+    "sections": {
+      "media":"Media",
+      "dates_price":"Dates & Price",
+      "settings":"Settings",
+      "basic_info":"Basic info"
+    },
+    "page": {
+      "title": "Edit campaign"
+    }
+  },
+  "remove": "Remove",
+  "image_upload": {
+    "update": "Update",
+    "remove": "Remove",
+    "click_or_drag": "Click or drag and drop",
+    "supported_formats": "Supported formats: JPG, PNG, GIF, SVG",
+    "max_size": "Max size: 10MB",
+    "uploaded_logo": "Uploaded logo",
+    "uploaded_image": "Uploaded image"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "participants": {
+      "title": "Participants",
+      "units": "people"
+    },
+    "campaigns": {
+      "title": "Campaigns",
+      "units": "pcs."
+    }
   }
 }
