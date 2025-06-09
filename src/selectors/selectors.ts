@@ -2,21 +2,6 @@ import {createSelector} from "reselect";
 import {RootState} from "../redux/store";
 import {getRandomColor, getTimeDate} from "../helpers/scripts";
 import participants from "../pages/Participants/Participants.tsx";
-export const selectCapsules = (state:RootState) => state.capsules.capsules;
-export const selectCapsulesToListList = createSelector(selectCapsules, (products)=>{
-    return [
-/*        {
-            name: "Всі товари",
-            value: null
-        },*/
-        ...products.map((item:any)=>{
-        return {
-            name: item?.title,
-            value: item?.id
-        }
-    })]
-});
-
 
 export const selectUsers = (state:RootState) => state.users.users;
 

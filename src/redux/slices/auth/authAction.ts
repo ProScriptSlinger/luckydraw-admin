@@ -1,7 +1,6 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import AuthService from "../../../api/AuthService";
 import { resetUsers } from "../users/usersSlice";
-import {resetCapsules} from "../capsules/capsulesSlice.ts";
 import {resetParticipants} from "../participants/participantsSlice.ts";
 
 
@@ -97,7 +96,6 @@ export const asyncLogoutAction = createAsyncThunk(
             let response = await AuthService.logout();
             localStorage.removeItem('token');
             thunkAPI.dispatch(resetUsers());
-            thunkAPI.dispatch(resetCapsules());
             thunkAPI.dispatch(resetParticipants());
             return response;
         } catch (e:any) {

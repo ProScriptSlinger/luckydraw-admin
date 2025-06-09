@@ -1,9 +1,4 @@
 
-import htmlToDraft from "html-to-draftjs";
-
-import { ContentState, EditorState } from 'draft-js';
-
-
 export function getTimeDate(dateString: string) {
     const date = new Date(dateString);
     return ("0" + (date.getDate())).slice(-2) + '.' +
@@ -12,15 +7,6 @@ export function getTimeDate(dateString: string) {
         ("0" + (date.getHours())).slice(-2) + ':' +
         ("0" + (date.getMinutes())).slice(-2);
 }
-
-
-export const htmlToDraftBlocks = (html:string) => {
-    const blocksFromHtml = htmlToDraft(html);
-    const { contentBlocks, entityMap } = blocksFromHtml;
-    const contentState = ContentState.createFromBlockArray(contentBlocks, entityMap);
-    return EditorState.createWithContent(contentState);
-};
-
 
 
 

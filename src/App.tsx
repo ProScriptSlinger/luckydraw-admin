@@ -11,9 +11,6 @@ import './i18n';
 import './styles/index.scss';
 import Participants from "./pages/Participants/Participants.tsx";
 import Participant from "./pages/Participants/Participant.tsx";
-import Capsule from "./pages/Capsules/Capsule.tsx";
-import CreateCapsule from "./pages/Capsules/CreateCapsule.tsx";
-import Capsules from "./pages/Capsules/Capsules.tsx";
 import Campaigns from "./pages/Campaigns/Campaigns.tsx";
 import Campaign from "./pages/Campaigns/Campaign.tsx";
 import CreateCampaign from "./pages/Campaigns/CreateCampaign.tsx";
@@ -38,12 +35,6 @@ function App() {
               <Route path=":participantID" element={<Participant/>} />
               <Route path="page/:pageNumber" element={<Participants/>} />
               <Route index element={<Participants/>} />
-            </Route>
-            <Route path="/capsules">
-              <Route path=":categoryID" element={<Capsule/>} />
-              <Route path="create" element={<CreateCapsule/>} />
-              <Route path="page/:pageNumber" element={<Capsules/>} />
-              <Route index element={<Capsules/>} />
             </Route>
             <Route path="/campaigns">
               <Route path=":campaignID" element={<Campaign/>} />
