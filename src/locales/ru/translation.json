@@ -141,5 +141,9 @@
       "payment_currency": "Валюта платежа",
       "receipt_number": "Номер чека"
     }
+  },
+  "settings": {
+    "title": "Настройки",
+    "language": "Язык"
   }
 } 
