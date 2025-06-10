@@ -151,5 +151,9 @@
       "payment_currency": "Payment currency",
       "receipt_number": "Recipient number"
     }
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language"
   }
 }

@@ -48,7 +48,7 @@ const Login = () => {
                                 {error && <p style={{color:"#ff0000"}}>{error}</p>}
                             </div>
                             <div className="login__button">
-                                <Button type={'button'} name={'Войти'} />
+                                <Button type={'button'} name={'Login'} />
                             </div>
                         </form>
                         )}

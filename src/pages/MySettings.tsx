@@ -9,6 +9,8 @@ import {IUser} from "../helpers/types";
 import HeaderPanel from "../components/molecules/HeaderPanel/HeaderPanel";
 import Input from "../components/atoms/Input/Input";
 import PreloaderContent from "../components/atoms/PreloaderContent/PreloaderContent";
+import LanguageSelector from "../components/molecules/LanguageSelector/LanguageSelector";
+import { useTranslation } from 'react-i18next';
 
 const MySettings:FC = () => {
 
@@ -49,42 +51,25 @@ const MySettings:FC = () => {
             formData.append('password', password );
         }
 
-
-
-
         dispatch(asyncSettingsAction(formData))
     };
 
+    const {t} = useTranslation();
 
-/*
-    useEffect(()=>{
-        if(user?.avatar){
-            setFileList([
-                {
-                    uid: '-1',
-                    name: 'image.png',
-                    status: 'done',
-                    url: `${process.env.REACT_APP_URL_AVATAR+user.avatar}`,
-                }
-            ])
-        }
-
-    },[user,isLoading])*/
-
- //   if(isLoading) return <Preloader/>;
     return (
         <>
             <div className="container">
-                <HeaderPanel title={`Настройки`} onSave={handleSubmit}  />
+                <HeaderPanel title={t('settings.title')} onSave={handleSubmit}  />
                 {!isLoading  ?
                     <>
                         <div className="form-product">
                             <div className="form-product__wrapper">
                                 <div className="form-product__block">
-                                    <div className="form-product__images">
-
-                                    </div>
                                     <div className="form-product__inner">
+                                        <div className="form-product__language">
+                                            <h3>{t('settings.language')}</h3>
+                                            <LanguageSelector />
+                                        </div>
                                         <form onSubmit={handleSubmit} >
                                             <div className="form-product__input">
                                                 <Input className={errors.fullName && touched.fullName ? "error": ""} value={values.fullName} onBlur={handleBlur} onChange={handleChange} name={'fullName'} placeholder={'Full Name*'} />
