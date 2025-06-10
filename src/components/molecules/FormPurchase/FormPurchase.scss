@@ -1,0 +1,49 @@
+@use '@/styles/_variables.scss' as *;
+
+.form-purchase {
+    background: $elements-color;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+
+    &__section {
+        margin-bottom: 32px;
+
+        h3 {
+            margin: 0 0 16px;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__field {
+        flex: 1;
+    }
+
+    &__checkbox {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 11px 17px;
+        border-radius: 8px;
+        background: $elements-color;
+        span {
+            font-weight: 600;
+            font-size: 15px;
+            color: $color-500;
+        }
+    }
+} 

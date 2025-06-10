@@ -4,12 +4,14 @@ import authSlice from "./slices/auth/authSlice";
 import usersSlice from "./slices/users/usersSlice";
 import participantsSlice from "./slices/participants/participantsSlice.ts";
 import campaignsSlice from "./slices/campaigns/campaignsSlice.ts";
+import purchasesSlice from "./slices/purchases/purchasesSlice.ts";
 
 const rootReducer = combineReducers({
     auth: authSlice,
     users: usersSlice,
     participants: participantsSlice,
     campaigns: campaignsSlice,
+    purchases: purchasesSlice,
     modals: modalsSlice,
 });
 

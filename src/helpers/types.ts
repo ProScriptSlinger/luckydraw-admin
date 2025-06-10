@@ -79,3 +79,30 @@ export enum NotificationType {
     ERROR = "ERROR",
     WARNING = "WARNING",
 }
+
+export interface IPurchase {
+    _id: string;
+    cartItems: Array<{
+        _id: any;
+        count: number;
+    }>;
+    userId: any;
+    totalPrice: number;
+    paymentMethod: 'payme' | 'click';
+    status: 'pending' | 'completed' | 'failed' | 'canceled';
+    isDonating: boolean;
+    deliveryAddress?: {
+        city: string;
+        district: string;
+        house: string;
+        apartment: string;
+        landmark: string;
+    };
+    paymentId?: string;
+    receiptNumber?: string;
+    createdAt?: Date;
+    updatedAt?: Date;
+}
+
+export interface ICreatePurchaseDto extends Omit<IPurchase, '_id' | 'createdAt' | 'updatedAt'> {}
+export interface IUpdatePurchaseDto extends IPurchase {}

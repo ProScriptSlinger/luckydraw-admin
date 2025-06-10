@@ -99,6 +99,47 @@
     "uploaded_image": "Загруженное изображение"
   },
   "dashboard": {
-    "title": "Статистика"
+    "title": "Статистика",
+    "purchases": {
+      "title": "Покупки",
+      "units": "шт."
+    },
+    "campaigns": {
+      "title": "Кампании",
+      "units": "шт."
+    },
+    "participants": {
+      "title": "Участники",
+      "units": "шт."
+    }
+  },
+  "purchases": {
+    "title": "Покупки",
+    "units": "шт.",
+    "sections": {
+      "basic_info": "Основная информация",
+      "delivery_address": "Адрес доставки",
+      "payment_info": "Платежная информация"
+    },
+    "page": {
+      "title": "Редактировать покупку"
+    },
+    "fields": {
+      "total_price": "Общая стоимость",
+      "payment_method": "Способ оплаты",
+      "status": "Статус",
+      "is_donating": "Донация",
+      "city": "Город",
+      "district": "Район",
+      "house": "Дом",
+      "apartment": "Квартира",
+      "landmark": "Отметка",
+      "payment_id": "ID платежа",
+      "payment_status": "Статус платежа",
+      "payment_date": "Дата платежа",
+      "payment_amount": "Сумма платежа",
+      "payment_currency": "Валюта платежа",
+      "receipt_number": "Номер чека"
+    }
   }
 } 

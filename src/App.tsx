@@ -14,6 +14,8 @@ import Participant from "./pages/Participants/Participant.tsx";
 import Campaigns from "./pages/Campaigns/Campaigns.tsx";
 import Campaign from "./pages/Campaigns/Campaign.tsx";
 import CreateCampaign from "./pages/Campaigns/CreateCampaign.tsx";
+import Purchases from "./pages/Purchases/Purchases.tsx";
+import Purchase from "./pages/Purchases/Purchase.tsx";
 
 function App() {
   return (
@@ -41,6 +43,11 @@ function App() {
               <Route path="create" element={<CreateCampaign/>} />
               <Route path="page/:pageNumber" element={<Campaigns/>} />
               <Route index element={<Campaigns/>} />
+            </Route>
+            <Route path="/purchases">
+              <Route path=":purchaseID" element={<Purchase/>} />
+              <Route path="page/:pageNumber" element={<Purchases/>} />
+              <Route index element={<Purchases/>} />
             </Route>
 
             <Route path="/mysettings" element={<MySettings/>}/>

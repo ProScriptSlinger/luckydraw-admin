@@ -1,5 +1,5 @@
 import { FC, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatchEx, useSelectorEx } from "../../hooks/redux";
 import { useFormik } from "formik";
 import { asyncGetCampaignAction, asyncUpdateCampaignAction } from "../../redux/slices/campaigns/campaignsAction";
@@ -28,6 +28,7 @@ const toISODateTimeString = (localDateTime: string): string => {
 const Campaign: FC = () => {
     const { campaignID } = useParams();
     const dispatch = useDispatchEx();
+    const navigate = useNavigate();
     const { t } = useTranslation();
     const { isLoadingCampaign, campaign } = useSelectorEx(state => state.campaigns);
 
@@ -61,7 +62,9 @@ const Campaign: FC = () => {
                     startDate: toISODateTimeString(values.startDate),
                     endDate: toISODateTimeString(values.endDate),
                 };
-                dispatch(asyncUpdateCampaignAction(updateData));
+                dispatch(asyncUpdateCampaignAction(updateData)).then(() => {
+                    navigate('/campaigns');
+                });
             }
         },
     });

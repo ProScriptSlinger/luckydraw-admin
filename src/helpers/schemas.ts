@@ -48,3 +48,19 @@ export const valSchemaCampaign = yup.object({
         }
     )
 });
+
+export const valSchemaPurchase = yup.object({
+    totalPrice: yup.number().required('Required').min(0),
+    paymentMethod: yup.string().oneOf(['payme', 'click'], 'Invalid payment method').required('Required'),
+    status: yup.string().oneOf(['pending', 'completed', 'failed'], 'Invalid status').required('Required'),
+    isDonating: yup.boolean(),
+    deliveryAddress: yup.object({
+        city: yup.string(),
+        district: yup.string(),
+        house: yup.string(),
+        apartment: yup.string(),
+        landmark: yup.string()
+    }),
+    paymentId: yup.string(),
+    receiptNumber: yup.string()
+});

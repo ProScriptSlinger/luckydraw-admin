@@ -10,6 +10,7 @@ import UserIcon from "../../icons/UserIcon.tsx";
 import {useTranslation} from "react-i18next";
 import i18n from '../../../i18n.ts';
 import InfoTagIcon from '../../icons/InfoTagIcon.tsx';
+import ShoppingCartIcon from '../../icons/ShoppingCartIcon.tsx';
 
 const Sidebar = () => {
     const dispatch = useDispatchEx();
@@ -37,6 +38,7 @@ const Sidebar = () => {
                         <ul className={'sidebar__menu'}>
                             <li className={'sidebar__item'}><Link to="/participants">{t('participants_pages.title')} <UserIcon/></Link></li>
                             <li className={'sidebar__item'}><Link to="/campaigns">{t('campaigns_pages.title')} <BagIcon/></Link></li>
+                            <li className={'sidebar__item'}><Link to="/purchases">{t('purchases_pages.title')} <ShoppingCartIcon/></Link></li>
                             {/* <li className={'sidebar__item'}><Link to="/capsules">{t('capsules_pages.title')} <BagIcon/></Link></li> */}
                             <li className={'sidebar__item'}><Link to="/users">{t('users_pages.title')} <InfoTagIcon/></Link></li>
                         </ul>

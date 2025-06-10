@@ -14,6 +14,7 @@ const StatisticsItems:FC = () => {
 
     const {statistics} = useSelectorEx(state => state.participants);
     const {campaignsStatistics} = useSelectorEx(state => state.campaigns);
+    const {purchasesStatistics} = useSelectorEx(state => state.purchases);
     return (
         <div className="statistics-items">
             <div className="statistics-items__item">
@@ -48,6 +49,25 @@ const StatisticsItems:FC = () => {
                     <div className="statistics-item__content-status">
                         {campaignsStatistics?.totalCampaignsPerDay > 0 ?
                             <Tag name={`${calculatePercentageGrowth(campaignsStatistics?.totalCampaignsPerDay,campaignsStatistics?.totalCampaigns)} %`} textColor={getColorById(3).textColor} color={getColorById(3).color}/>
+
+                            : ""}
+                    </div>
+                </div>
+            </div>
+
+            <div className="statistics-items__item">
+                <Link to={'/purchases'} className="statistics-items__item-link">
+                    <ArrowIcon/>
+                </Link>
+                <div className="statistics-items__item-title">{t('dashboard.purchases.title')}</div>
+                <div className="statistics-items__item-content">
+                    <div className="statistics-items__item-content-counter">
+                        <span>{purchasesStatistics?.totalPurchases} {t('dashboard.purchases.units')}</span>
+                        <span>for today →</span>
+                    </div>
+                    <div className="statistics-item__content-status">
+                        {purchasesStatistics?.totalPurchasesPerDay > 0 ?
+                            <Tag name={`${calculatePercentageGrowth(purchasesStatistics?.totalPurchasesPerDay,purchasesStatistics?.totalPurchases)} %`} textColor={getColorById(3).textColor} color={getColorById(3).color}/>
 
                             : ""}
                     </div>

@@ -8,6 +8,7 @@ import StatisticsItems from "../components/molecules/StatisticsItems/StatisticsI
 import {asyncGetParticipantsStatisticsAction} from "../redux/slices/participants/participantsAction.ts";
 import { useTranslation } from 'react-i18next';
 import {asyncGetCampaignsStatisticsAction} from "../redux/slices/campaigns/campaignsAction.ts";
+import { asyncGetPurchasesStatisticsAction } from '../redux/slices/purchases/purchasesAction.ts';
 
 const Dashboard:FC = () => {
     const dispatch = useDispatchEx();
@@ -16,6 +17,7 @@ const Dashboard:FC = () => {
     useEffect(() => {
         dispatch(asyncGetParticipantsStatisticsAction())
         dispatch(asyncGetCampaignsStatisticsAction())
+        dispatch(asyncGetPurchasesStatisticsAction())
     }, []);
 
 

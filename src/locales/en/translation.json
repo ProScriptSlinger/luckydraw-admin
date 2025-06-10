@@ -116,6 +116,40 @@
     "campaigns": {
       "title": "Campaigns",
       "units": "pcs."
+    },
+    "purchases": {
+      "title": "Purchases",
+      "units": "pcs."
+    }
+  },
+  "purchases_pages": {
+    "title": "Purchases",
+    "units": "pcs.",
+    "sections": {
+      "basic_info": "Basic info",
+      "delivery_address": "Delivery address",
+      "payment_info": "Payment info",
+      "cart_items": "Cart items"
+    },
+    "page": {
+      "title": "Edit purchase"
+    },
+    "fields": {
+      "total_price": "Total price",
+      "payment_method": "Payment method",
+      "status": "Status",
+      "is_donating": "Is donating",
+      "city": "City",
+      "district": "District",
+      "house": "House",
+      "apartment": "Apartment",
+      "landmark": "Landmark",
+      "payment_id": "Payment ID",
+      "payment_status": "Payment status",
+      "payment_date": "Payment date",
+      "payment_amount": "Payment amount",
+      "payment_currency": "Payment currency",
+      "receipt_number": "Recipient number"
     }
   }
 }
