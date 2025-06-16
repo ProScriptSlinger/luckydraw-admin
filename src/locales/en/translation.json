@@ -155,5 +155,22 @@
   "settings": {
     "title": "Settings",
     "language": "Language"
+  },
+  "tasks_pages": {
+    "title": "Tasks",
+    "fields": {
+      "name": "Name",
+      "name_uz": "Name (Uzbek)",
+      "description": "Description",
+      "description_uz": "Description (Uzbek)",
+      "type": "Type",
+      "reward_points": "Reward Points",
+      "is_active": "Active",
+      "channel_id": "Channel ID",
+      "referral_code": "Referral Code"
+    },
+    "create": {
+      "title": "Create task"
+    }
   }
 }

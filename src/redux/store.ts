@@ -5,6 +5,7 @@ import usersSlice from "./slices/users/usersSlice";
 import participantsSlice from "./slices/participants/participantsSlice.ts";
 import campaignsSlice from "./slices/campaigns/campaignsSlice.ts";
 import purchasesSlice from "./slices/purchases/purchasesSlice.ts";
+import tasksSlice from "./slices/tasks/tasksSlice.ts";
 
 const rootReducer = combineReducers({
     auth: authSlice,
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
     participants: participantsSlice,
     campaigns: campaignsSlice,
     purchases: purchasesSlice,
+    tasks: tasksSlice,
     modals: modalsSlice,
 });
 
