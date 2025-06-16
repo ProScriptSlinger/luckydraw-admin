@@ -1,0 +1,41 @@
+@use '@/styles/_variables.scss' as *;
+
+.form-task {
+    position: relative;
+    &__wrapper {
+        display: flex;
+        gap: 20px;
+    }
+    &__block {
+        position: relative;
+        width: 100%;
+    }
+    &__inner {
+        margin-top: 20px;
+        h3 {
+            font-weight: 600;
+            font-size: 16px;
+            color: $main-color;
+            margin-bottom: 20px;
+        }
+    }
+    &__input {
+        margin-bottom: 20px;
+    }
+    &__checkbox {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 11px 17px;
+        border-radius: 8px;
+        background: $elements-color;
+        margin-bottom: 20px;
+        span {
+            font-weight: 600;
+            font-size: 15px;
+            color: $color-500;
+        }
+    }
+} 

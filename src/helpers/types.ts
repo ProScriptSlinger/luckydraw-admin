@@ -106,3 +106,19 @@ export interface IPurchase {
 
 export interface ICreatePurchaseDto extends Omit<IPurchase, '_id' | 'createdAt' | 'updatedAt'> {}
 export interface IUpdatePurchaseDto extends IPurchase {}
+
+export interface ITask {
+    _id: string;
+    name: string;
+    nameUz: string;
+    description?: string;
+    descriptionUz?: string;
+    type: 'channel_subscription' | 'referral';
+    rewardPoints: number;
+    isActive: boolean;
+    completedAt?: Date;
+    channelId?: string;
+    referralCode?: string;
+    createdAt?: Date;
+    updatedAt?: Date;
+}

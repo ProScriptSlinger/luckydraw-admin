@@ -39,8 +39,8 @@ const Sidebar = () => {
                             <li className={'sidebar__item'}><Link to="/participants">{t('participants_pages.title')} <UserIcon/></Link></li>
                             <li className={'sidebar__item'}><Link to="/campaigns">{t('campaigns_pages.title')} <BagIcon/></Link></li>
                             <li className={'sidebar__item'}><Link to="/purchases">{t('purchases_pages.title')} <ShoppingCartIcon/></Link></li>
-                            {/* <li className={'sidebar__item'}><Link to="/capsules">{t('capsules_pages.title')} <BagIcon/></Link></li> */}
                             <li className={'sidebar__item'}><Link to="/users">{t('users_pages.title')} <InfoTagIcon/></Link></li>
+                            <li className={'sidebar__item'}><Link to="/tasks">{t('tasks_pages.title')} <BagIcon/></Link></li>
                         </ul>
                     </div>
                     <div className="sidebar__additional-nav">

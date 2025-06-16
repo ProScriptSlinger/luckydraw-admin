@@ -145,5 +145,22 @@
   "settings": {
     "title": "Настройки",
     "language": "Язык"
+  },
+  "tasks_pages": {
+    "title": "Задания",
+    "fields": {
+      "name": "Название",
+      "name_uz": "Название (узбекский)",
+      "description": "Описание",
+      "description_uz": "Описание (узбекский)",
+      "type": "Тип",
+      "reward_points": "Награда",
+      "is_active": "Активно",
+      "channel_id": "ID канала",
+      "referral_code": "Реферальный код"
+    },
+    "create": {
+      "title": "Создать задание"
+    }
   }
 } 
