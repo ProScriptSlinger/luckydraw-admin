@@ -57,6 +57,7 @@ export interface ICampaign {
     maxParticipants?: number;
     categories?: string[];
     isPopular?: boolean;
+    isLive?: boolean;
     isNew?: boolean;
     isFinal?: boolean;
     isCoolPrize?: boolean;

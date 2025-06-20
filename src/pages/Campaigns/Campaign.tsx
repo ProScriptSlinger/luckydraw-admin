@@ -44,6 +44,7 @@ const Campaign: FC = () => {
             endDate: toLocalDateTimeString(new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)),
             maxParticipants: 0,
             categories: [],
+            isLive: false,
             isPopular: false,
             isNew: false,
             isFinal: false,

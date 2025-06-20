@@ -64,6 +64,7 @@
       "title": "Редактировать кампанию"
     },
     "fields": {
+      "is_live": "Живая",
       "image_url": "URL изображения",
       "brand_logo_url": "URL логотипа бренда",
       "is_popular": "Популярная",

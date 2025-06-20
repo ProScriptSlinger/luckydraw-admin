@@ -229,6 +229,14 @@ const FormCampaign: FC<IFormCampaign> = ({ config }) => {
                                     label="allowDonation"
                                 />
                             </div>
+                            <div className="form-campaign__checkbox">
+                                <span>{t('campaigns_pages.fields.is_live')}</span>
+                                <Switch
+                                    isChecked={values.isLive}
+                                    onChange={(value) => setFieldValue('isLive', value)}
+                                    label="isLive"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
